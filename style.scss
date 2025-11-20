@@ -18,6 +18,9 @@ body {
 :root {
   /* Background color*/
   --bg-primary-color: #000000;
+  --bg-fill-color : white;
+  --bg-food-color : rgb(192, 15, 15);
+  --bg-head-color : green;
 
   /* text color*/
   --text-primary-color: #d9dadb;
@@ -75,15 +78,27 @@ section {
     flex-grow: 1;
     border: 2px solid var(--border-primary-color);
     display: grid;
-    grid-template-columns: repeat(auto-fill , minmax(30px ,1fr));
-    grid-template-rows: repeat(auto-fill , minmax(30px , 1fr));
+    grid-template-columns: repeat(auto-fill , minmax(50px ,1fr));
+    grid-template-rows: repeat(auto-fill , minmax(50px , 1fr));
   }
 }
 
 
 .block {
-    width: 30px;
-    height: 30px;
+    // width: 30px;
+    // height: 30px;
     border: 1px solid var(--border-primary-color);
-    border-radius: 50%;
+    // border-radius: 50%;
+}
+
+.fill {
+   background-color: var(--bg-fill-color);
+}
+
+.food{
+  background-color: var(--bg-food-color);
+}
+
+.green {
+  background-color: var(--bg-head-color);
 }
