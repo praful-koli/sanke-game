@@ -1,12 +1,15 @@
 const board = document.querySelector(".board");
 const startButton = document.querySelector(".btn-start");
-const modal = document.querySelector(".modal");
-const startGameModal = document.querySelector(".start-game");
-const gameOverModal = document.querySelector(".game-over");
 const restartButton = document.querySelector(".btn-restart");
 const highScoreElement  = document.querySelector("#high-score")
 const scoreElement  = document.querySelector("#score")
 const gamePlayTimeElement  = document.querySelector("#time")
+
+const modal = document.querySelector(".modal");
+const startGameModal = document.querySelector(".start-game");
+const gameOverModal = document.querySelector(".game-over");
+
+
 const blockHight = 40;
 const blockWight = 40;
 const rows = Math.floor(board.clientHeight / blockHight);
@@ -15,23 +18,17 @@ const cols = Math.floor(board.clientWidth / blockWight);
 let highScore = 0;
 let score = 0;
 let time = `00-00`;
-
-
 let clearTime = null;
 let intervalId = null;
 const blocks = []; // put all div inside the array with row and col
-let snake = [
-  { x: 5, y: 10 }, // the array of object object contain the cordientes
-];
-
-let food = {
-  x: Math.floor(Math.random() * rows),
-  y: Math.floor(Math.random() * cols),
-};
-
-
-
+let snake = [{ x: 5, y: 10 }] // the array of object object contain the cordientes];
+let food = { x: Math.floor(Math.random() * rows),y: Math.floor(Math.random() * cols),};
 let direction = "ArrowUp";
+
+
+
+
+
 
 for (let row = 0; row < rows; row++) {
   for (let col = 0; col < cols; col++) {
