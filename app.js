@@ -7,12 +7,8 @@ const restartButton = document.querySelector(".btn-restart");
 const highScoreElement  = document.querySelector("#high-score")
 const scoreElement  = document.querySelector("#score")
 const gamePlayTimeElement  = document.querySelector("#time")
-
-
-
-
-const blockHight = 30;
-const blockWight = 30;
+const blockHight = 40;
+const blockWight = 40;
 const rows = Math.floor(board.clientHeight / blockHight);
 const cols = Math.floor(board.clientWidth / blockWight);
 
@@ -26,8 +22,6 @@ let intervalId = null;
 const blocks = []; // put all div inside the array with row and col
 let snake = [
   { x: 5, y: 10 }, // the array of object object contain the cordientes
-  //   { x: 5, y: 7 },
-  //   { x: 5, y: 8 },
 ];
 
 let food = {
