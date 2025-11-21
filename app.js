@@ -11,8 +11,8 @@ const gamePlayTimeElement  = document.querySelector("#time")
 
 
 
-const blockHight = 50;
-const blockWight = 50;
+const blockHight = 30;
+const blockWight = 30;
 const rows = Math.floor(board.clientHeight / blockHight);
 const cols = Math.floor(board.clientWidth / blockWight);
 
@@ -81,7 +81,9 @@ const render = function () {
     modal.style.display = "flex";
     gameOverModal.style.display = "flex";
     startGameModal.style.display = "none";
-    clearInterval(clearTime);  
+    clearInterval(clearTime)
+   
+    return;
   }
 
   //   snake eat food logic and adding one block to the senke body
@@ -146,7 +148,7 @@ function restartGame() {
   
   
    snake = [{ x: 5, y: 6 }];
-  direction = null;
+  direction = 'ArrowUp';
   food = {
     x: Math.floor(Math.random() * rows),
     y: Math.floor(Math.random() * cols),
@@ -159,7 +161,7 @@ function restartGame() {
    scoreElement.textContent =`00`
    startClock();
    score = 0;
-   highScoreElement.textContent = `${JSON.parse(localStorage.getItem('highScore'))}`;  
+    highScoreElement.textContent = `${JSON.parse(localStorage.getItem('highScore'))}`;
 }
 
 
