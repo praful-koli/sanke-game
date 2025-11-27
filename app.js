@@ -1,3 +1,4 @@
+// UI Elements
 const board = document.querySelector(".board");
 const startButton = document.querySelector(".btn-start");
 const restartButton = document.querySelector(".btn-restart");
@@ -9,12 +10,13 @@ const modal = document.querySelector(".modal");
 const startGameModal = document.querySelector(".start-game");
 const gameOverModal = document.querySelector(".game-over");
 
-
+// Game Config
 const blockHight = 40;
 const blockWight = 40;
 const rows = Math.floor(board.clientHeight / blockHight);
 const cols = Math.floor(board.clientWidth / blockWight);
 
+// Game State
 let highScore = 0;
 let score = 0;
 let time = `00-00`;
